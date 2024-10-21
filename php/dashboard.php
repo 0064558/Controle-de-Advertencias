@@ -36,30 +36,27 @@ if (!isset($_SESSION['usuario'])) {
         <tbody>
             <?php
             // Exemplo de consulta para obter os dados do banco
-            require_once 'db.php';
             $query = "SELECT * FROM membros";
             $result = $pdo->query($query);
+
             if ($result->rowCount() > 0) {
-                while ($row = $result->fetch_assoc()) {
+                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                     echo "<tr>";
-                    echo "<td>{$row['nome']}</td>";
-                    echo "<td>{$row['cargo']}</td>";
-                    echo "<td>{$row['notificacoes_baixas']}</td>";
-                    echo "<td>{$row['notificacoes_medias']}</td>";
-                    echo "<td>{$row['notificacoes_altas']}</td>";
-                    echo "<td>{$row['advertencias']}</td>";
-                    echo "<td>{$row['motivo']}</td>";
+                    echo "<td>" . (!empty($row['nome_completo']) ? $row['nome_completo'] : 'N/A') . "</td>";
+                    echo "<td>" . (!empty($row['cargo']) ? $row['cargo'] : 'N/A') . "</td>";
+                    echo "<td>" . (!empty($row['notificacoes_baixas']) ? $row['notificacoes_baixas'] : 'N/A') . "</td>";
+                    echo "<td>" . (!empty($row['notificacoes_medias']) ? $row['notificacoes_medias'] : 'N/A') . "</td>";
+                    echo "<td>" . (!empty($row['notificacoes_altas']) ? $row['notificacoes_altas'] : 'N/A') . "</td>";
+                    echo "<td>" . (!empty($row['advertencias']) ? $row['advertencias'] : 'N/A') . "</td>";
+                    echo "<td>" . (!empty($row['motivo']) ? $row['motivo'] : 'N/A') . "</td>";
                     echo "</tr>";
                 }
+            } else {
+                echo '<tr><td colspan="7">Nenhum membro encontrado.</td></tr>';
             }
             ?>
         </tbody>
     </table>
-    <?php
-    if ($result->rowCount() < 1) {
-        echo 'tabela está vazia';
-    }
-    ?>
     <br>
     <a href="logout.php" id="btn-logout">Sair</a> 
 </div>
