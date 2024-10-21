@@ -8,7 +8,6 @@ $base = 'http://localhost/teste';
 
 try {
     $pdo = new PDO("mysql:dbname=".$dbname.";host=".$servername, $username, $password);
-    echo "Conexão com o banco de dados bem-sucedida! ";
 } catch(PDOException $e) {
     echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
 }

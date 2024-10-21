@@ -1,7 +1,10 @@
-.dashboard-container {
+.button-container {
     margin: 0 auto;
     padding: 20px;
     max-width: 800px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 20px; /* Espaçamento entre os botões */
 }
 
 h1 {
@@ -33,4 +36,57 @@ a {
     margin-top: 20px;
     color: #000;
     text-decoration: none;
+}
+
+.dashboard-actions {
+    display: flex;
+    gap: 20px; /* Adiciona um espaçamento de 20px entre os botões */
+    margin-top: 20px; /* Adiciona um espaço entre a tabela e os botões */
+}
+
+.btn-cadastrar {
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(156, 155, 155, 0.764);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#btn-logout {
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-cadastrar:hover, #btn-logout:hover {
+    background-color: #1f1f1f; /* Cor ao passar o mouse */
+}
+
+/* Estilo para os botões de ações Editar e Excluir) */
+.btn-acoes {
+    padding: 10px 20px; /* Tamanho dos botões */
+    background-color: rgba(156, 155, 155, 0.764);
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin: 5px; /* Espaçamento entre os botões */
+}
+
+.btn-acoes:hover {
+    background-color: #1f1f1f; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo específico para o botão de excluir */
+.btn-acoes.excluir {
+    background-color: #dc3545; /* Cor vermelha para o botão Excluir */
+}
+
+.btn-acoes.excluir:hover {
+    background-color: #c82333; /* Cor mais escura para o hover no botão Excluir */
 }

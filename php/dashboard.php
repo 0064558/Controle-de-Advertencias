@@ -11,16 +11,13 @@ if (!isset($_SESSION['usuario'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <title>Dashboard</title>
 </head>
 <body>
 <div class="dashboard-container">
     <h1>Bem-vindo, <?php echo $_SESSION['usuario']; ?>!</h1>
-    <p>Aqui estão as notificações e advertências dos membros.</p>
-    
-    <!-- Exemplo de Tabela para Exibir os Dados -->
     <table>
         <thead>
             <tr>
@@ -31,34 +28,39 @@ if (!isset($_SESSION['usuario'])) {
                 <th>Notificações Altas</th>
                 <th>Advertências</th>
                 <th>Motivo</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            // Exemplo de consulta para obter os dados do banco
+            
             $query = "SELECT * FROM membros";
             $result = $pdo->query($query);
 
             if ($result->rowCount() > 0) {
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                     echo "<tr>";
-                    echo "<td>" . (!empty($row['nome_completo']) ? $row['nome_completo'] : 'N/A') . "</td>";
-                    echo "<td>" . (!empty($row['cargo']) ? $row['cargo'] : 'N/A') . "</td>";
-                    echo "<td>" . (!empty($row['notificacoes_baixas']) ? $row['notificacoes_baixas'] : 'N/A') . "</td>";
-                    echo "<td>" . (!empty($row['notificacoes_medias']) ? $row['notificacoes_medias'] : 'N/A') . "</td>";
-                    echo "<td>" . (!empty($row['notificacoes_altas']) ? $row['notificacoes_altas'] : 'N/A') . "</td>";
-                    echo "<td>" . (!empty($row['advertencias']) ? $row['advertencias'] : 'N/A') . "</td>";
-                    echo "<td>" . (!empty($row['motivo']) ? $row['motivo'] : 'N/A') . "</td>";
+                    echo "<td>" . htmlspecialchars($row['nome_completo']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['cargo']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['notificacoes_baixas']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['notificacoes_medias']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['notificacoes_altas']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['advertencias']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['motivo']) . "</td>";
+                    echo "<td><a href='editar_membro.php?id=" . $row['id'] . "' class='btn-acoes'>Editar</a> | 
+                      <a href='excluir_membro.php?id=" . $row['id'] . "' class='btn-acoes excluir'>Excluir</a></td>";
                     echo "</tr>";
                 }
             } else {
-                echo '<tr><td colspan="7">Nenhum membro encontrado.</td></tr>';
+                echo '<tr><td colspan="8">Nenhum membro encontrado.</td></tr>';
             }
             ?>
         </tbody>
     </table>
-    <br>
-    <a href="logout.php" id="btn-logout">Sair</a> 
+    <div class="button-container">
+        <a href="cadastrar_membro.php" class="btn-cadastrar">Cadastrar Novo Membro</a>
+        <a href="logout.php" id="btn-logout">Sair</a> 
+    </div>
 </div>
 </body>
 </html>
