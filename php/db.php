@@ -12,6 +12,9 @@ try {
     echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
 }
 
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
 // Cria a conexão
 /*$conn = new mysqli($servername, $username, $password, $dbname);
 
