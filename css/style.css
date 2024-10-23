@@ -4,9 +4,11 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f5;
     padding: 20px;
 }
+
 @media (max-width: 600px) {
     form {
         width: 100%;
@@ -17,18 +19,73 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;               /* Altura automática, ajusta ao conteúdo */
     flex-direction: column;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 250px;               /* Diminui a largura do container */
-    background-color: rgba(203, 203, 203, 0.619);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    width: 320px;
+    background-color: #fff;
     margin: 0 auto;
+    transition: all 0.3s ease-in-out;
 }
 
+.login-container:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-3px); 
+}
 
+input[type="email"],
+input[type="password"] {
+    width: 100%;  /* Garante que ambos os campos tenham a mesma largura */
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
 
 #btn-login {
-    margin-top: 1em;
+    width: 100%;  
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-login:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+label {
+    width: 100%;  /* Faz com que o label siga a largura dos inputs */
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+.flashError {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
 }
