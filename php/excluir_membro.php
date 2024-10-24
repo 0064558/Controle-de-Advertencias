@@ -12,7 +12,6 @@
             if (confirmacao) {
                 return true;  // Se o usuário confirmar, o formulário será enviado e a exclusão ocorrerá
             } else {
-                window.location.href = 'dashboard.php'; // Caso o usuário cancele, volta para o dashboard
                 return false;  // Não envia o formulário
             }
         }
