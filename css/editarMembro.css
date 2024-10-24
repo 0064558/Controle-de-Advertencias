@@ -1,4 +1,3 @@
-/* Regra geral para reset de estilo */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -25,8 +24,8 @@ body {
     border-radius: 5px;
     text-align: center;
     margin-bottom: 10px;
-    width: 100%; /* Mantém a largura total */
-    max-width: 500px; /* Igual ao container */
+    width: 100%; 
+    max-width: 500px; 
     display: flex; /* Alinha a mensagem no centro do container */
     justify-content: center; /* Centraliza o texto */
 }
@@ -45,7 +44,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para inputs e textarea */
+/* inputs e textarea */
 .cadastro-container input[type="text"],
 .cadastro-container input[type="number"],
 .cadastro-container textarea,
@@ -67,7 +66,7 @@ body {
     height: 100px;
 }
 
-/* Estilo dos botões */
+/* Botões */
 .btn-cadastrar,
 .btn-atualizar {
     background-color: #4CAF50;
@@ -88,7 +87,7 @@ body {
     background-color: #45a049;
 }
 
-/* Estilo para botão voltar */
+/* botão voltar */
 .btn-voltar {
     display: inline-block;
     margin-top: 10px;
@@ -101,14 +100,14 @@ body {
     text-decoration: underline;
 }
 
-/* Estilo para títulos */
+/* títulos */
 h1, h2 {
     margin-bottom: 20px;
     color: #333;
     text-align: center;
 }
 
-/* Estilo para os labels */
+/* labels */
 label {
     font-size: 14px;
     margin-bottom: 5px;

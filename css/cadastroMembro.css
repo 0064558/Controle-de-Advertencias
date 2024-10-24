@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px; /* Adiciona espaço ao redor para prevenir cortes */
+    padding: 20px;
 }
 
 .mensagem {
