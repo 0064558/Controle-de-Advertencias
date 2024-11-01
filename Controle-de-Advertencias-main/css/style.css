@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    padding: 20px;
+    background-image: url(../Icons/detail-header.png);
+    background-size: 30%;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 100%;
+    }
+}
+
+.login-container img
+{
+ width: 18%;
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(218, 117, 2, 0.1); 
+    width: 320px;
+    background-color: #2e2e2e;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-container:hover {
+    box-shadow: 0 6px 15px rgba(255, 115, 0, 0.2); 
+    transform: translateY(-3px); 
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;  /* Garante que ambos os campos tenham a mesma largura */
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #000000;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#btn-login {
+    width: 100%;  
+    padding: 12px;
+    background-color: #ff8800;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-login:hover {
+    background-color: #723801;
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+label {
+    width: 100%;  /* Faz com que o label siga a largura dos inputs */
+    margin-bottom: 3px;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.flashError {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
+}

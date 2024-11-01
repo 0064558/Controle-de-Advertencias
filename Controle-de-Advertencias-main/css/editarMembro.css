@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Centraliza a mensagem e garante a largura adequada */
+.mensagem {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%; 
+    max-width: 500px; 
+    display: flex; /* Alinha a mensagem no centro do container */
+    justify-content: center; /* Centraliza o texto */
+}
+
+/* Container de cadastro e edição */
+.cadastro-container, .editar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    padding: 20px;
+    max-width: 500px;
+    background-color: #383838;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* inputs e textarea */
+.cadastro-container input[type="text"],
+.cadastro-container input[type="number"],
+.cadastro-container textarea,
+.editar-container input[type="text"],
+.editar-container input[type="number"],
+.editar-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Para evitar redimensionamento excessivo de textarea */
+.cadastro-container textarea,
+.editar-container textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Botões */
+.btn-cadastrar,
+.btn-atualizar {
+    background-color: #d48a00;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    margin-top: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cadastrar:hover,
+.btn-atualizar:hover {
+    background-color: #723801;
+}
+
+/* botão voltar */
+.btn-voltar {
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    color: #0054ad;
+    text-decoration: none;
+}
+
+.btn-voltar:hover {
+    text-decoration: underline;
+}
+
+/* títulos */
+h1, h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+p 
+{
+    color: #ffffff;
+}
+
+/* labels */
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
