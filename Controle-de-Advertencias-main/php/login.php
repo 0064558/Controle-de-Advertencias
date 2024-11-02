@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Para texto simples
         if ($senha == $user['senha']) {
             $_SESSION['usuario'] = $user['nome'];
+            $_SESSION['is_admin'] = $user['admin']; // Armazena o status admin na sessão
             header("Location: dashboard.php");
             exit();
         } else {
