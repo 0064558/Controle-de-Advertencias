@@ -33,7 +33,6 @@ if (!isset($_SESSION['usuario'])) {
         </thead>
         <tbody>
             <?php
-            
             $query = "SELECT * FROM membros";
             $result = $pdo->query($query);
 
@@ -59,6 +58,9 @@ if (!isset($_SESSION['usuario'])) {
     </table>
     <div class="button-container">
         <a href="cadastrar_membro.php" class="btn-cadastrar">Cadastrar Novo Membro</a>
+        <?php if ($_SESSION['is_admin']) : ?>
+            <a href="cadastrar_usuario.php" class="btn-cadastrar">Cadastrar Usuário</a>
+        <?php endif; ?>
         <a href="logout.php" id="btn-logout">Sair</a> 
     </div>
 </div>

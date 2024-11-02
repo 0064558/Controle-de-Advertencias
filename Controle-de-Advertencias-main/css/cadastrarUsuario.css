@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #000000;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -27,6 +27,18 @@ body {
     max-width: 500px; /* Mesma largura do formulário */
 }
 
+.mensagem-erro {
+    background-color: #dc3545;
+    color: #ffffff;
+    padding: 15px;
+    border: 1px solid #db4150;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px; /* Ajusta o espaço abaixo da mensagem */
+    width: 100%; /* Largura total */
+    max-width: 500px; /* Mesma largura do formulário */
+}
+
 .cadastro-container {
     display: flex;
     flex-direction: column;
@@ -34,14 +46,15 @@ body {
     align-items: center;
     padding: 20px;
     max-width: 500px;
-    background-color: #fff;
+    background-color: #383838;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(77, 77, 77, 0.1);
 }
 
 .cadastro-container input[type="text"],
-.cadastro-container input[type="number"],
-.cadastro-container textarea {
+.cadastro-container input[type="email"],
+.cadastro-container input[type="password"],
+.cadastro-container input[type="checkbox"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -50,14 +63,14 @@ body {
     font-size: 16px;
 }
 
-.cadastro-container textarea {
-    resize: vertical;
-    height: 100px;
+.cadastro-container input[type="checkbox"] {
+    width: auto; /* Para checkbox, ajusta a largura */
+    margin-top: 10px; /* Espaço acima do checkbox */
 }
 
 .btn-cadastrar {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #d48a00;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -70,15 +83,16 @@ body {
 }
 
 .btn-cadastrar:hover {
-    background-color: #45a049;
+    background-color: #be6600;
 }
 
 .btn-voltar {
     display: inline-block;
     margin-top: 10px;
     text-align: center;
-    color: #007BFF;
+    color: #0054ad;
     text-decoration: none;
+    border: #000000;
 }
 
 .btn-voltar:hover {
@@ -87,12 +101,12 @@ body {
 
 h1 {
     margin-bottom: 20px;
-    color: #333;
+    color: #ffffff;
     text-align: center;
 }
 
 label {
     font-size: 14px;
     margin-bottom: 5px;
-    color: #333;
+    color: #ffffff;
 }
