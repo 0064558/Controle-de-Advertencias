@@ -69,7 +69,6 @@ CREATE TABLE `membros` (
 
 LOCK TABLES `membros` WRITE;
 /*!40000 ALTER TABLE `membros` DISABLE KEYS */;
-INSERT INTO `membros` VALUES (29,'Rodrigo Alexandre Alves','Trainee',0,0,0,1,'Não compareceu a reuniões');
 /*!40000 ALTER TABLE `membros` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,4 +144,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-03 13:58:50
+-- Dump completed on 2024-11-03 14:14:20
