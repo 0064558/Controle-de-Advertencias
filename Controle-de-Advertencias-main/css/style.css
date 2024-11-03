@@ -19,10 +19,10 @@ body {
     }
 }
 
-.login-container img
-{
- width: 18%;
+.login-container img {
+    width: 18%;
 }
+
 .login-container {
     display: flex;
     justify-content: center;
@@ -43,18 +43,22 @@ body {
 }
 
 input[type="email"],
-input[type="password"] {
-    width: 100%;  /* Garante que ambos os campos tenham a mesma largura */
+input[type="password"],
+input[type="text"] {
+    width: 100%;  /* Garante que o campo ocupe toda a largura disponível */
+    max-width: 300px;  /* Define um limite máximo, ajuste conforme necessário */
     padding: 12px;
     margin: 10px 0;
     border-radius: 5px;
     border: 1px solid #000000;
     font-size: 16px;
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;  /* Adiciona uma transição suave para mudança de tipo */
 }
 
 input[type="email"]:focus,
-input[type="password"]:focus {
+input[type="password"]:focus,
+input[type="text"]:focus {
     border-color: #000000;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
