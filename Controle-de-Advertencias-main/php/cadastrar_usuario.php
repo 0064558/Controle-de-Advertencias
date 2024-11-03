@@ -33,15 +33,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt_check->rowCount() > 0) {
             $mensagem_erro = "Usuário já cadastrado com este e-mail.";
         } else {
+            // Criptografa a senha
+            $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
+
             // Prepara a consulta SQL para inserir um novo usuário
             $sql = "INSERT INTO usuarios (nome, email, senha, admin) VALUES (:nome, :email, :senha, :admin)";
-
             $stmt = $pdo->prepare($sql);
 
             // Define os parâmetros
             $stmt->bindParam(':nome', $nome);
             $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':senha', $senha);
+            $stmt->bindParam(':senha', $senhaCriptografada); // Usando a senha criptografada
             $stmt->bindParam(':admin', $admin);
 
             // Executa a inserção

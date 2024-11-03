@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         
         // Para texto simples
-        if ($senha == $user['senha']) {
+        if (password_verify($senha, $user['senha'])) {
             $_SESSION['usuario'] = $user['nome'];
             $_SESSION['is_admin'] = $user['admin']; // Armazena o status admin na sessão
             header("Location: dashboard.php");

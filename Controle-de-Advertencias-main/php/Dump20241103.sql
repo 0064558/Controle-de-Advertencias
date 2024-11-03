@@ -60,7 +60,7 @@ CREATE TABLE `membros` (
   `advertencias` int DEFAULT '0',
   `motivo` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,6 +69,7 @@ CREATE TABLE `membros` (
 
 LOCK TABLES `membros` WRITE;
 /*!40000 ALTER TABLE `membros` DISABLE KEYS */;
+INSERT INTO `membros` VALUES (29,'Rodrigo Alexandre Alves','Trainee',0,0,0,1,'Não compareceu a reuniões');
 /*!40000 ALTER TABLE `membros` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -114,7 +115,7 @@ CREATE TABLE `usuarios` (
   `admin` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,7 +124,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'admin','admin@admin.com','senha123',1),(17,'aleatorio','aleatorio@gmail.com','123',0);
+INSERT INTO `usuarios` VALUES (27,'Admin','admin@admin.com','$2y$10$8/bVQpsscOA5feMCp5x/xuM/69f2aeGsNyC7jy6JTvp9w8TVPOhaC',1),(28,'User','user@gmail.com','$2y$10$yPAuC6lZoj6kuFvl7t2PgOD5OwaCCoRFMuq2JZXKv9zX3Yt0/inAu',0);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,4 +145,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-02 16:17:06
+-- Dump completed on 2024-11-03 13:58:50
