@@ -101,3 +101,16 @@ label {
     margin-bottom: 15px;
     text-align: center;
 }
+
+.mensagem-erro {
+    background-color: #dc3545;
+    color: #ffffff;
+    padding: 15px;
+    border: 1px solid #db4150;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px; /* Ajusta o espaço abaixo da mensagem */
+    width: 100%; /* Largura total */
+    max-width: 500px; /* Mesma largura do formulário */
+    margin-top: 1em;
+}

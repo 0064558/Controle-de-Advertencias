@@ -29,6 +29,21 @@
             </label>
 
             <button type="submit" id="btn-login">Entrar</button>
+            <br>
+            
+            <!-- Exibe a mensagem de erro -->
+            <?php
+            session_start();
+            if(isset($_SESSION['mensagem_erro'])): ?>
+            <div class="mensagem-erro">
+                <?php
+                    echo $_SESSION['mensagem_erro'];
+                    unset($_SESSION['mensagem_erro']); // Remove a mensagem de erro da sessão
+                ?>
+            </div>
+            <?php endif; ?>
+            
+           
         </div>
     </form>
 
