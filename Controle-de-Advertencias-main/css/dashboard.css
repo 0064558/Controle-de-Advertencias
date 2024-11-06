@@ -114,3 +114,72 @@ a {
 .btn-acoes.excluir:hover {
     background-color: #723801;
 }
+
+@media (max-width: 870px) {
+    .dashboard-container{
+        width: 500px;
+    }
+    table {
+        width: 100px;
+    }
+    th, td, tr {
+        font-size: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .btn-cadastrar {
+        font-size: 10px;
+    }
+    #btn-logout {
+        font-size: 10px;
+    }
+    .btn-acoes.excluir{
+        font-size: 10px;
+    }
+    .btn-acoes {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    th, td, tr {
+        font-size: 8px; 
+        padding: 8px;
+        text-align: center;
+    }
+    .btn-cadastrar {
+        font-size: 8px;
+    }
+    #btn-logout {
+        font-size: 8px;
+    }
+    .btn-acoes.excluir{
+        font-size: 8px;
+    }
+    .btn-acoes {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 520px) {
+    th, td, tr {
+        font-size: 6px;
+        padding: 6px;
+        text-align: center;
+    }
+    .btn-cadastrar {
+        font-size: 6px;
+    }
+    #btn-logout {
+        font-size: 6px;
+    }
+    .btn-acoes.excluir{
+        font-size: 6px;
+    }
+    .btn-acoes {
+        font-size: 6px;
+    }
+}

@@ -114,3 +114,16 @@ label {
     max-width: 500px; /* Mesma largura do formulário */
     margin-top: 1em;
 }
+
+@media (max-width: 420px) {
+    .login-container {
+        width: 170px;
+        height: 300px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    .btn-login {
+        border-radius: 2px;
+}
+}
