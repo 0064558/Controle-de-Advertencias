@@ -31,12 +31,21 @@ tbody
 h1 {
     text-align: center;
     color: #ffffff;
+    margin-bottom: 10px;
+    
+    top: 20px; /* Deixa um espaço entre o topo da tela e o título */
+    z-index: 10;
+    background-color: #000000;
+    padding: 15px;
+    margin-top: 0; /* Remove qualquer margem acima do título */
 }
 
 table {
     width: 100%;
+    table-layout: fixed; /* Garante que as colunas tenham largura fixa */
     border-collapse: collapse;
     margin-top: 20px;
+    overflow-y: auto; /* Permite rolagem */
 }
 
 table, th, td {
@@ -117,7 +126,14 @@ a {
 
 @media (max-width: 870px) {
     .dashboard-container{
-        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 20px;
+        background-color: #1f1f1f;
+        border-radius: 10px;
+        max-height: 100vh;
+        overflow: hidden; /* Evita que a rolagem afete todo o container */
     }
     table {
         width: 100px;
@@ -181,5 +197,69 @@ a {
     }
     .btn-acoes {
         font-size: 6px;
+    }
+}
+
+/* Estilo da barra de pesquisa */
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    top: 60px; /* Ajusta a distância para a barra de pesquisa */
+    z-index: 10;
+    background-color: #1f1f1f;
+    border: 1px solid #7c839298;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.table-container {
+    height: calc(100vh - 200px); /* Ajuste para a altura da tabela */
+    overflow-y: auto; /* Permite rolagem apenas na tabela */
+    flex-grow: 1; /* Faz com que a tabela ocupe o espaço restante */
+    max-height: calc(100vh - 160px); /* Ajusta a altura da tabela para que a rolagem não afete a barra de pesquisa */
+}
+
+/* Campos de entrada e botões */
+.filter-form input,
+.filter-form select,
+.filter-form button {
+    padding: 10px 15px; /* Espaçamento interno */
+    font-size: 14px; /* Tamanho da fonte */
+    border: 1px solid #7c839298; /* Borda leve */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #2e2e2e9f; /* Fundo combinando com o tema */
+    color: #ffffff; /* Cor do texto */
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Botão de filtro */
+.filter-form button {
+    background-color: #be6600; /* Fundo do botão */
+    color: #000000; /* Cor do texto */
+    cursor: pointer; /* Indica interatividade */
+    border: none; /* Remove borda padrão */
+    transition: background-color 0.3s ease; /* Animação de transição */
+}
+
+.filter-form button:hover {
+    background-color: #723801; /* Fundo ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .filter-form {
+        flex-direction: column; /* Empilha os campos verticalmente */
+    }
+
+    .filter-form input,
+    .filter-form select,
+    .filter-form button {
+        width: 100%; /* Campos ocupam toda a largura disponível */
     }
 }

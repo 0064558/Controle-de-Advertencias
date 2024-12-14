@@ -7,7 +7,7 @@
     <title>Excluir Membro</title>
     <link rel="stylesheet" href="../css/excluirMembro.css">
     <script type="text/javascript">
-        // Função para confirmar a exclusão
+        // Função javascript para confirmar a exclusão
         function confirmarExclusao() {
             var confirmacao = confirm("Você tem certeza que deseja excluir este membro?");
             if (confirmacao) {

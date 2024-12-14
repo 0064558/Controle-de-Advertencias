@@ -39,9 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: ../index.php"); // Redireciona de volta para O index.php
         exit();
     }
-} else {
-    // Exibe mensagem de erro se a requisição não for do tipo POST
-    /*$mensagem_erro = "Método de requisição inválido.";*/
 }
 
 /*return early*/
